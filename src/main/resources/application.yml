@@ -5,7 +5,7 @@ server:
 spring:
   datasource:
 
-        url: jdbc:log4jdbc:mysql://49.234.112.12:3306/robot?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai
+        url: jdbc:log4jdbc:mysql://49.234.112.12:3306/softgame2?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai
         driver-class-name: net.sf.log4jdbc.DriverSpy
         username: root
         password: 122316

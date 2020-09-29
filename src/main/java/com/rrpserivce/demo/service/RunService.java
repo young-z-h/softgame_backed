@@ -87,7 +87,7 @@ public class RunService {
                 if (!StringUtils.isEmpty(jsonData.get("companytypeid"))) {
                     //出租和制造企业
                     if (Integer.parseInt(jsonData.get("companytypeid").toString()) == 1 || Integer.parseInt(jsonData.get("companytypeid").toString()) == 2) {
-                        //非骊久只能看自己所拥有的机器人
+
                         if (!jsonData.get("owncompanyid").toString().equals("1")) {
                             predicates.add(criteriaBuilder.equal(root.get("robot").get("company").get("id"), jsonData.get("owncompanyid").toString()));
                         }

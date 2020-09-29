@@ -12,7 +12,7 @@ import java.util.Map;
 
 @RestController
 @CrossOrigin()
-@Api(value = "机器人参数")
+@Api(value = "设备参数")
 public class RobotDataController {
     @Autowired
     private RobotDataService robotDataService;
@@ -49,7 +49,7 @@ public class RobotDataController {
     }
 
     @GetMapping(value = "/robotData/getRobotDataByRobot")
-    @ApiOperation("根据机器人获取全部列表")
+    @ApiOperation("根据设备获取全部列表")
 
     public CommonResult getRobotDataByRobot(@RequestParam String robot_id) {
         CommonResult result = new CommonResult();

@@ -40,7 +40,7 @@ public class LeaseController {
         }
     }
 //    @GetMapping(value = "/lease/findNewestByRobot")
-//    @ApiOperation(value = "根据机器人查找最新的租赁")
+//    @ApiOperation(value = "根据设备查找最新的租赁")
 //    public CommonResult findNewestByRobot(@RequestParam(value = "id")String id){
 //        CommonResult result = new CommonResult();
 //        try {
@@ -119,7 +119,7 @@ public class LeaseController {
 
 
     @GetMapping(value = "/lease/findAllByRobot")
-    @ApiOperation(value = "根据机器人查找所有租赁")
+    @ApiOperation(value = "根据设备查找所有租赁")
     public CommonResult findAllByRobot(@RequestParam(value = "id")int id){
         CommonResult result = new CommonResult();
         try {
@@ -268,7 +268,7 @@ public class LeaseController {
     }
 
     @PostMapping(value = "/lease/findLeaseByRobotAndCompany")
-    @ApiOperation(value = "根据机器人和企业查询租赁信息")
+    @ApiOperation(value = "根据设备和企业查询租赁信息")
     public CommonResult findLeaseByRobotAndCompany(@RequestBody Map<String, Object> jsonData){
         CommonResult result = new CommonResult();
         try {
@@ -282,7 +282,7 @@ public class LeaseController {
         }
     }
     @PostMapping(value = "/lease/findRobotByCity")
-    @ApiOperation(value = "根据机器人和企业查询租赁信息")
+    @ApiOperation(value = "根据设备和企业查询租赁信息")
     public CommonResult findRobotByCity(@RequestBody Map<String, Object> jsonData){
         CommonResult result = new CommonResult();
         try {

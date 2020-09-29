@@ -49,7 +49,7 @@ public class WarningController {
     }
 
     @GetMapping(value = "/warning/getWarningByRobot")
-    @ApiOperation("根据机器人获取全部列表")
+    @ApiOperation("根据设备获取全部列表")
 
     public CommonResult getWarningByRobot(@RequestParam String robot_id) {
         CommonResult result = new CommonResult();

@@ -83,7 +83,7 @@ public class ScztController {
 
 
     @GetMapping(value = "/sczt/findScztByRobot")
-    @ApiOperation(value = "查找机器人的生产状态")
+    @ApiOperation(value = "查找设备的生产状态")
     public CommonResult findByRobot(String id){
         CommonResult result = new CommonResult();
         try {

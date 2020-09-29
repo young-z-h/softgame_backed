@@ -49,7 +49,7 @@ public class TroubleController {
     }
 
     @GetMapping(value = "/trouble/getTroubleByRobot")
-    @ApiOperation("根据机器人获取全部列表")
+    @ApiOperation("根据设备获取全部列表")
 
     public CommonResult getTroubleByRobot(@RequestParam String robot_id) {
         CommonResult result = new CommonResult();

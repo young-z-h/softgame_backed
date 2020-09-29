@@ -17,7 +17,7 @@ public interface CompanyRepository extends JpaRepository<Company, Integer> {
     List<Company> findAllBy2Keys(String key1, String key2);
     public List<Company> findAll(Specification<Company> spec);
 
-    // 查询租用自己企业机器人的 所有租用企业
+    // 查询租用自己企业设备的 所有租用企业
     @Query(value = "select distinct co.* from company co inner join lease le on le.company_id =?1 where co.type ='租用企业'",nativeQuery = true)
     List<Company> findByRobot(int id);
 }

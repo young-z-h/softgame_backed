@@ -61,7 +61,7 @@ public class LeaseService {
                 if (!StringUtils.isEmpty(jsonData.get("companytypeid"))) {
                     //出租和制造企业
                     if (Integer.parseInt(jsonData.get("companytypeid").toString()) == 1 ||Integer.parseInt(jsonData.get("companytypeid").toString()) == 2){
-                        //非骊久只能看自己所拥有的机器人
+
                         if(!jsonData.get("owncompanyid").toString().equals("1")){
                             predicates.add(criteriaBuilder.equal(root.get("robot").get("belongingCompany").get("id"), jsonData.get("owncompanyid").toString()));
                         }
@@ -117,7 +117,7 @@ public class LeaseService {
     public List<Lease> findAll(){return leaseRepository.findAll();}
     //按id查找
     public Lease find(int id){return leaseRepository.findById(id).get();}
-    //根据机器人id寻找
+    //根据设备id寻找
     public List<Lease> findByRobot(int id){return leaseRepository.findAllByRobot_Id(id);}
     //根据租用企业寻找
     public List<Lease> findByCompany(int id){

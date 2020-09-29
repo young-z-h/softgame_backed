@@ -12,12 +12,12 @@ import java.util.Map;
 
 @RestController
 @CrossOrigin
-@Api(value = "机器人")
+@Api(value = "设备")
 public class RobotController {
     @Autowired
     private RobotService robotService;
     @PostMapping(value = "/robot/addRobot")
-    @ApiOperation(value = "增加机器人")
+    @ApiOperation(value = "增加设备")
     public CommonResult add(@RequestBody Robot robot){
         CommonResult result = new CommonResult();
         try {
@@ -33,7 +33,7 @@ public class RobotController {
 
 
     @DeleteMapping(value = "/robot/deleteRobot")
-    @ApiOperation(value = "删除机器人")
+    @ApiOperation(value = "删除设备")
     public CommonResult deleteById(@RequestParam(value = "id") String id){
         CommonResult result = new CommonResult();
         try {
@@ -49,7 +49,7 @@ public class RobotController {
 
 
     @PutMapping(value = "/robot/updateRobot")
-    @ApiOperation("修改机器人")
+    @ApiOperation("修改设备")
     public CommonResult updateDepartment(@RequestBody Robot robot){
         CommonResult result = new CommonResult();
         try {
@@ -65,7 +65,7 @@ public class RobotController {
 
 
     @GetMapping(value = "/robot/findAllRobot")
-    @ApiOperation(value = "查找所有机器人")
+    @ApiOperation(value = "查找所有设备")
     public CommonResult findAll(){
         CommonResult result = new CommonResult();
         try {
@@ -82,7 +82,7 @@ public class RobotController {
 
 
     @GetMapping(value = "/robot/findById")
-    @ApiOperation(value = "查找一个机器人")
+    @ApiOperation(value = "查找一个设备")
     public CommonResult findById(@RequestParam(value = "id")String id){
         CommonResult result = new CommonResult();
         try {
@@ -97,7 +97,7 @@ public class RobotController {
     }
 
     @GetMapping(value = "/robot/getByCompany")
-    @ApiOperation(value = "查找机器人")
+    @ApiOperation(value = "查找设备")
     public CommonResult getByCompany(@RequestParam int company_id) {
         CommonResult result = new CommonResult();
         try {
@@ -113,7 +113,7 @@ public class RobotController {
 
 
     @GetMapping(value = "/robot/findAllByCompany")
-    @ApiOperation(value = "按企业id查找机器人")
+    @ApiOperation(value = "按企业id查找设备")
     public CommonResult findAllByCompany(@RequestParam(value = "id")int id){
         CommonResult result = new CommonResult();
         try {
@@ -127,7 +127,7 @@ public class RobotController {
         }
     }
     @GetMapping(value = "/robot/findAllByBelongCompanyAndCanBeLeased")
-    @ApiOperation(value = "按企业id查找机器人")
+    @ApiOperation(value = "按企业id查找设备")
     public CommonResult findAllByBelongCompany(@RequestParam(value = "id")int id){
         CommonResult result = new CommonResult();
         try {
@@ -142,7 +142,7 @@ public class RobotController {
     }
 
     @GetMapping(value = "/robot/findAllByCompanyid")
-    @ApiOperation(value = "按企业id查找被该企业使用的机器人")
+    @ApiOperation(value = "按企业id查找被该企业使用的设备")
     public CommonResult findAllByCompanyid(int id){
         CommonResult result = new CommonResult();
         try {
@@ -156,9 +156,9 @@ public class RobotController {
         }
     }
 
-    //出租企业查找 租用企业下的全部机器人
+    //出租企业查找 租用企业下的全部设备
     @PostMapping(value = "/robot/findByComapny")
-    @ApiOperation(value = "出租企业查找 租用企业下的全部机器人")
+    @ApiOperation(value = "出租企业查找 租用企业下的全部设备")
     public CommonResult findByComapny(@RequestBody  Map<String,Object> jsondata){
         CommonResult result = new CommonResult();
         try {
@@ -174,7 +174,7 @@ public class RobotController {
 
 
     @PostMapping(value = "/robot/QueryRobot")
-    @ApiOperation(value = "动态查询机器人")
+    @ApiOperation(value = "动态查询设备")
     public CommonResult QueryLease(@RequestBody Map<String, Object> jsonData){
         CommonResult result = new CommonResult();
         try {

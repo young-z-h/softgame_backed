@@ -36,11 +36,11 @@ public class RobotService {
     public List<Robot> findAllByBelongingCompany(int id){
         return robotRepository.findAllByBelongingCompany_Id(id);
     }
-    // 根据所属企业查找未被租赁的机器人
+    // 根据所属企业查找未被租赁的设备
     public List<Robot> findByBelongingCompanyAndCanBeLease(int id){
         return robotRepository.findAllByBelongCompanyid(id);
     }
-    //出租企业查找 租用企业下的全部机器人
+    //出租企业查找 租用企业下的全部设备
     public List<Robot> findByComapny(Map<String,Object> jsondata){
         String companyid = null == jsondata.get("companyid")? null:jsondata.get("companyid").toString();
         String owncompanyid = null == jsondata.get("owncompanyid")? null:jsondata.get("owncompanyid").toString();
@@ -72,7 +72,7 @@ public class RobotService {
                 if (!StringUtils.isEmpty(jsonData.get("companytypeid"))) {
                     //出租和制造企业
                     if (Integer.parseInt(jsonData.get("companytypeid").toString()) == 1 ||Integer.parseInt(jsonData.get("companytypeid").toString()) == 2){
-                        //非骊久只能看自己所拥有的机器人
+
                         if(!jsonData.get("owncompanyid").toString().equals("1")){
                             predicates.add(criteriaBuilder.equal(root.get("belongingCompany").get("id"), jsonData.get("owncompanyid").toString()));
                         }

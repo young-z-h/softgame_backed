@@ -1,7 +1,5 @@
 package com.rrpserivce.demo.repository;
 
-import com.rrpserivce.demo.entity.Bench;
-import com.rrpserivce.demo.entity.BenchCount;
 import com.rrpserivce.demo.entity.RobotData;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;

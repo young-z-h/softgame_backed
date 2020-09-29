@@ -93,7 +93,7 @@ public class CompanyController {
         }
     }
     @GetMapping(value = "/company/findAllCompanysByTowKeys")
-    @ApiOperation(value = "查找所有有用机器人的企业")
+    @ApiOperation(value = "查找所有有用设备的企业")
     public CommonResult findAllByTowKeys(){
         CommonResult result = new CommonResult();
         try {
@@ -142,7 +142,7 @@ public class CompanyController {
 
 
     @GetMapping(value = "/company/findCompanyByRobot")
-    @ApiOperation(value = "查找租用自己机器人的租用企业")
+    @ApiOperation(value = "查找租用自己设备的租用企业")
     public CommonResult findByRobot(int id){
         CommonResult result = new CommonResult();
         try {

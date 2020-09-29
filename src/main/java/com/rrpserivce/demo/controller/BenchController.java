@@ -55,7 +55,7 @@ public class BenchController {
     }
 
     @GetMapping(value = "/bench/getBenchByRobot")
-    @ApiOperation("根据机器人获取全部模台列表")
+    @ApiOperation("根据设备获取全部模台列表")
 
     public CommonResult getBenchByRobot(@RequestParam String robot_id) {
         CommonResult result = new CommonResult();
@@ -71,7 +71,7 @@ public class BenchController {
     }
 
     @GetMapping(value = "/bench/getByCompany")
-    @ApiOperation("根据机器人获取全部模台列表")
+    @ApiOperation("根据设备获取全部模台列表")
 
     public CommonResult getByCompany(@RequestParam int company_id) {
         CommonResult result = new CommonResult();

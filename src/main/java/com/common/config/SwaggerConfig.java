@@ -41,7 +41,7 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("接口测试")
-                .description("机器人租赁平台")
+                .description("设备租赁平台")
                 .termsOfServiceUrl("")
                 .version("1.0")
                 .build();
